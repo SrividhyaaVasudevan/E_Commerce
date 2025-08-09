@@ -1,15 +1,22 @@
 package common;
 
 import org.openqa.selenium.WebDriver;
-import pages.action.*;
+import pages.action.HomePageAction;
+import pages.action.CartPageAction;
+import pages.action.ProductDetailPageAction;
 
 public class PageInitializer extends BrowserInitializer {
 
-    public LoginPageAction loginPageAction;
+    public HomePageAction homePageAction;
+    public CartPageAction cartPageAction;
+    public ProductDetailPageAction productDetailPageAction;
+
 
 
     public void initializePages(WebDriver driver){
-        loginPageAction = new LoginPageAction(driver);
+        homePageAction = new HomePageAction(driver);
+        cartPageAction = new CartPageAction(driver);
+        productDetailPageAction = new ProductDetailPageAction(driver);
     }
 
 }

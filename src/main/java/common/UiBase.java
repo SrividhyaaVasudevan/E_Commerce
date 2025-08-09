@@ -40,6 +40,11 @@ public class UiBase{
         return isDisplayed(element);
     }
 
+    protected void scrollIntoView(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        staticWait(500);
+    }
+
     protected  boolean isDisplayed(WebElement element){
         return element.isDisplayed();
     }
@@ -64,7 +69,7 @@ public class UiBase{
         }
     }
 
-    protected  void clicker(WebDriver driver, WebElement element){
+    protected  void clicker(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
     }
@@ -109,6 +114,11 @@ public class UiBase{
         return "srividhyaa" + timeStamp + "@test.com";
     }
 
+    public static String generateUniqueUsername() {
+        String timeStamp = new SimpleDateFormat("MMddHHmmss").format(new Date());
+        return "srividhyaa" + timeStamp;
+    }
+
     public static String generateUniquePhoneNumber() {
         return new SimpleDateFormat("MMddHHmmss").format(new Date());
     }
@@ -124,6 +134,18 @@ public class UiBase{
             return false;
         }
     }
+
+    public String getAlertMessage(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            return alert.getText();
+        } catch (TimeoutException e) {
+            System.out.println("No alert appeared within the timeout period");
+            return "No error";
+        }
+    }
+
 
     public boolean checkAlert(){
         try {
