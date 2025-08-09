@@ -19,4 +19,4 @@ Thumbs.db
 *.properties
 
 # ExtentReports output
-/test-output/
+test-output/
