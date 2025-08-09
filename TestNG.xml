@@ -5,6 +5,12 @@
         <classes>
             <!-- Add your test classes here -->
             <class name="tests.LoginPageTest"/>
+            <class name="tests.SigninPageTest"/>
+            <class name="tests.AddContactTest_1"/>
+            <class name="tests.AddContactTest_2"/>
+            <class name="tests.EditContactTest"/>
+            <class name="tests.DeleteContactTest"/>
+            <class name="tests.SessionNavigationTest"/>
         </classes>
     </test>
 </suite>
