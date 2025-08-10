@@ -79,6 +79,7 @@ public class UiBase{
     }
 
     protected void fill(WebElement element, String text){
+        staticWait(1000);
         element.sendKeys(text);
     }
 
