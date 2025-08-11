@@ -17,8 +17,8 @@ public class BaseTest extends PageInitializer {
 
     private WebDriver driver;
     public ExcelUtils testData = new ExcelUtils("testdata.xlsx");
-    public WebDriver setup(){
-        driver = driverInitializer();
+    public WebDriver setup(String browser){
+        driver = driverInitializer(browser);
         initializePages(driver);
         return driver;
     }
@@ -29,10 +29,11 @@ public class BaseTest extends PageInitializer {
         ExtentReportManager.initReports();
     }
 
+    @Parameters({"browser"})
     @BeforeClass
-    public void setupClass() {
+    public void setupClass(@Optional("chrome") String browser) {
         try{
-            driver = setup();
+            driver = setup(browser);
         }catch (Exception e){
             if (driver != null) driver.quit();
         }

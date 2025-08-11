@@ -15,10 +15,10 @@ import java.time.Duration;
 public class BrowserInitializer {
 
     WebDriver driver;
-    public WebDriver driverInitializer()
+    public WebDriver driverInitializer(String browserName)
     {
         // default: chrome
-        String browserName = System.getProperty("browser", "chrome").toLowerCase();
+        //String browserName = System.getProperty("browser", "chrome").toLowerCase();
 
         if (browserName.equalsIgnoreCase("chrome")) {
             chromeBrowser();

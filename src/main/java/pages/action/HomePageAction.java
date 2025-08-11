@@ -149,6 +149,7 @@ public class HomePageAction extends HomePageRepo {
     }
 
     public boolean verifyIfProductPresent(String expected){
+        waitUntilElementDisplayed(homePageCategories);
         scrollIntoView(homePageCategories);
         waitUntilElementDisplayed(firstProducts);
         staticWait(5000);
