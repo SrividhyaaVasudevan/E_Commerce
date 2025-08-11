@@ -35,7 +35,8 @@ public class BaseTest extends PageInitializer {
         try{
             driver = setup(browser);
         }catch (Exception e){
-            if (driver != null) driver.quit();
+            e.printStackTrace();
+            driver = setup(browser);
         }
     }
 
