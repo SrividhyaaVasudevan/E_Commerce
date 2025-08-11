@@ -40,6 +40,10 @@ public class BrowserInitializer {
     public void chromeBrowser(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         options.setAcceptInsecureCerts(true);
         driver = new ChromeDriver(options);
     }
@@ -47,6 +51,10 @@ public class BrowserInitializer {
     public void edgeBrowser(){
         System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         options.setAcceptInsecureCerts(true);
         driver = new EdgeDriver(options);
     }
@@ -55,6 +63,10 @@ public class BrowserInitializer {
         System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
         FirefoxOptions options = new FirefoxOptions();
         options.setAcceptInsecureCerts(true);
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         driver = new FirefoxDriver(options);
     }
 
