@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="AutomationSuite" parallel="classes" verbose="1">
+<suite name="AutomationSuite" parallel="classes" verbose="2">
     <test name="ContactListAppTests">
         <classes>
             <class name="tests.LoginTest"/>
@@ -8,6 +8,7 @@
             <class name="tests.CartTest"/>
             <class name="tests.ProductNavigationTest"/>
             <class name="tests.OrderPlacementTest"/>
+            <class name="tests.UIValidationTest"/>
         </classes>
     </test>
 </suite>

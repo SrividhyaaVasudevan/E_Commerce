@@ -1,10 +1,13 @@
 package pages.action;
 
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import pages.repo.HomePageRepo;
+
+import java.util.List;
 
 public class HomePageAction extends HomePageRepo {
     WebDriver driver;
@@ -156,6 +159,21 @@ public class HomePageAction extends HomePageRepo {
             }
         }
         return false;
+    }
+
+    public List<WebElement> getProductsElement(){
+        return products;
+    }
+
+    public WebElement getFirstProductElement(){
+        return productTitles.get(0);
+    }
+
+    public boolean responsiveTest(){
+        driver.manage().window().setSize(new Dimension(400, 800));
+        waitUntilElementDisplayed(laptopCategories);
+        staticWait(5000);
+        return isDisplayed(laptopCategories);
     }
 
 }
