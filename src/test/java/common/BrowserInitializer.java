@@ -56,9 +56,18 @@ public class BrowserInitializer {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
         options.addArguments("--disable-extensions");
+        options.addArguments("--disable-background-timer-throttling");
+        options.addArguments("--disable-backgrounding-occluded-windows");
+        options.addArguments("--disable-renderer-backgrounding");
+        options.addArguments("--disable-features=TranslateUI");
+        options.addArguments("--disable-ipc-flooding-protection");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--window-size=1920,1080");
+
         options.addArguments("--disable-logging");
         options.addArguments("--disable-dev-tools");
-        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--no-first-run");
+        options.addArguments("--no-default-browser-check");
         options.setAcceptInsecureCerts(true);
         driver = new EdgeDriver(options);
     }

@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="AutomationSuite" parallel="tests" verbose="1">
+<suite name="AutomationSuite" parallel="tests">
 
 <!--    <test name="E_Commerce_Chrome">-->
 <!--        <parameter name="browser" value="chrome"/>-->
