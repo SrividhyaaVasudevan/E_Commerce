@@ -95,7 +95,7 @@ public class BaseTest extends PageInitializer {
         }
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDownSuite() {
         // Flush the ExtentReports
         ExtentReportManager.flushReports();
