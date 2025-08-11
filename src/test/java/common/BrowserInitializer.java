@@ -52,9 +52,13 @@ public class BrowserInitializer {
         System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--headless=new");
-        options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-logging");
+        options.addArguments("--disable-dev-tools");
+        options.addArguments("--remote-allow-origins=*");
         options.setAcceptInsecureCerts(true);
         driver = new EdgeDriver(options);
     }
