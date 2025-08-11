@@ -37,7 +37,7 @@ public class UiBase{
                 .ignoring(StaleElementReferenceException.class);
 
         wait.until(ExpectedConditions.visibilityOf(element));
-        staticWait(2000);
+        //staticWait(2000);
         return isDisplayed(element);
     }
 
