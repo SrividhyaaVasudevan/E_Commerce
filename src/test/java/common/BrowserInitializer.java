@@ -63,7 +63,7 @@ public class BrowserInitializer {
         System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
         FirefoxOptions options = new FirefoxOptions();
         options.setAcceptInsecureCerts(true);
-        options.addArguments("--headless=new");
+        options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");

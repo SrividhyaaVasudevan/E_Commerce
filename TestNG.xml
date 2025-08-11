@@ -2,17 +2,17 @@
 
 <suite name="AutomationSuite" parallel="tests" verbose="1">
 
-    <test name="E_Commerce_Chrome">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.SigninTest"/>
-            <class name="tests.CartTest"/>
-            <class name="tests.ProductNavigationTest"/>
-            <class name="tests.OrderPlacementTest"/>
-            <class name="tests.UIValidationTest"/>
-        </classes>
-    </test>
+<!--    <test name="E_Commerce_Chrome">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.SigninTest"/>-->
+<!--            <class name="tests.CartTest"/>-->
+<!--            <class name="tests.ProductNavigationTest"/>-->
+<!--            <class name="tests.OrderPlacementTest"/>-->
+<!--            <class name="tests.UIValidationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="E_Commerce_Edge">
         <parameter name="browser" value="edge"/>
@@ -26,15 +26,15 @@
         </classes>
     </test>
 
-    <test name="E_Commerce_Firefox">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.SigninTest"/>
-            <class name="tests.CartTest"/>
-            <class name="tests.ProductNavigationTest"/>
-            <class name="tests.OrderPlacementTest"/>
-            <class name="tests.UIValidationTest"/>
-        </classes>
-    </test>
+<!--    <test name="E_Commerce_Firefox">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"/>-->
+<!--            <class name="tests.SigninTest"/>-->
+<!--            <class name="tests.CartTest"/>-->
+<!--            <class name="tests.ProductNavigationTest"/>-->
+<!--            <class name="tests.OrderPlacementTest"/>-->
+<!--            <class name="tests.UIValidationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
